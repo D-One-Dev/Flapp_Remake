@@ -336,10 +336,10 @@ RectTransform:
   m_Father: {fileID: 582724180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 2340}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426177938
 MonoBehaviour:
@@ -557,6 +557,8 @@ MonoBehaviour:
   minSpace: 8.3
   maxSpace: 10.8
   speed: 3
+  pipes1Passed: 0
+  pipes2Passed: 0
 --- !u!1 &570257343
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +989,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 800, y: 800}
+  m_SizeDelta: {x: 765, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742732914
 MonoBehaviour:
@@ -1018,7 +1020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
