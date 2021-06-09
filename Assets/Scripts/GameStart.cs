@@ -5,19 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Game pi;
+    private void Awake()
+    {
+        pi = new Game();
+        pi.Gameplay.Touch.performed += context => Touch();
+    }
+    private void OnEnable()
+    { pi.Enable(); }
+    private void OnDisable()
+    { pi.Disable(); }
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
     }
-
-    public void Button()
+    private void Touch()
     {
         SceneManager.LoadScene("Game");
     }
