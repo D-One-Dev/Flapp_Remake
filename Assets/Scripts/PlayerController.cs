@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Text Txt;
+    [SerializeField] private Text score, endScore;
+    [SerializeField] private GameObject cam, canvas;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float jumpForce;
     private Game pi;
     private void Awake()
     {
@@ -20,20 +23,24 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        //if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-        //{
-            //Debug.Log(1);
-            //Txt.text = "0";
-        //}
     }
 
     private void Touch()
     {
-        Debug.Log(1);
-        Txt.text = "0";
+        rb.velocity = new Vector2(0f, jumpForce);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Pipe"))
+        {
+            endScore.text = canvas.GetComponent<ScoreController>().score.ToString();
+            endScore.enabled = true;
+            score.enabled = false;
+            rb.gravityScale = 0f;
+            rb.velocity = Vector2.zero;
+            cam.GetComponent<PipesController>().speed = 0f;
+        }
     }
 }

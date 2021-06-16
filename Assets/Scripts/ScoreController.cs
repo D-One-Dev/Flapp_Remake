@@ -7,7 +7,7 @@ public class ScoreController : MonoBehaviour
 {
     [SerializeField] private GameObject player, cam, pipes1, pipes2;
     [SerializeField] private Text scoreTxt;
-    private int score;
+    public int score;
     // Start is called before the first frame update
     void Start()
     {

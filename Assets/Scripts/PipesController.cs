@@ -5,7 +5,8 @@ using UnityEngine;
 public class PipesController : MonoBehaviour
 {
     [SerializeField] private GameObject pipes1, pipes2, pipeUp1, pipeUp2, pipeDown1, pipeDown2;
-    [SerializeField] private float maxUpPos, minUpPos, maxDownPos, minDownPos, minSpace, maxSpace, speed;
+    [SerializeField] private float maxUpPos, minUpPos, maxDownPos, minDownPos, minSpace, maxSpace;
+    public float speed;
     public bool pipes1Passed, pipes2Passed;
     void Start()
     {
