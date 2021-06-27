@@ -8,9 +8,6 @@ public class StartTextController : MonoBehaviour
     [SerializeField] private Text startTxt;
     [SerializeField] private Outline ol;
     private float alpha;
-    void Start()
-    {
-    }
     void FixedUpdate()
     {
         alpha = Mathf.PingPong(Time.time / 1.5f, 1f);

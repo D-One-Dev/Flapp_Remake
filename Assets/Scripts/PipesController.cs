@@ -40,7 +40,6 @@ public class PipesController : MonoBehaviour
             pipeDown1.transform.position = new Vector3(pipeDown1.transform.position.x, Random.Range(minDownPos, maxDownPos), pipeDown1.transform.position.z);
             if(pipeUp1.transform.position.y - pipeDown1.transform.position.y > minSpace && pipeUp1.transform.position.y - pipeDown1.transform.position.y < maxSpace) break;
         }
-        
         pipes1Passed = false;
     }
 

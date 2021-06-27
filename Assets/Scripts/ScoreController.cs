@@ -8,15 +8,13 @@ public class ScoreController : MonoBehaviour
     [SerializeField] private GameObject player, cam, pipes1, pipes2;
     [SerializeField] private Text scoreTxt;
     public int score;
-    void Start()
-    {
-    }
     void FixedUpdate()
     {
         if (pipes1.transform.position.x < player.transform.position.x && cam.GetComponent<PipesController>().pipes1Passed != true)
         {
             score++;
             cam.GetComponent<PipesController>().pipes1Passed = true;
+            cam.GetComponent<PipesController>().speed += 0.05f;
             scoreTxt.text = score.ToString();
         }
 
@@ -24,6 +22,7 @@ public class ScoreController : MonoBehaviour
         {
             score++;
             cam.GetComponent<PipesController>().pipes2Passed = true;
+            cam.GetComponent<PipesController>().speed += 0.05f;
             scoreTxt.text = score.ToString();
         }
     }
